@@ -13,7 +13,7 @@ import { a } from '@react-spring/three'
 
 import shipWreck from '../assets/3d/shipWreck.glb'
 
-const Ship = ({ isRotating, setIsRotating, ...props }) => {
+const Ship = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
   const shipRef = useRef();
   const { gl, viewport } = useThree();
 

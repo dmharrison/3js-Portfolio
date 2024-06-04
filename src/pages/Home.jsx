@@ -13,7 +13,8 @@ import Balloon from '../models/Balloon'
 
 
 const Home = () => {
-  const [isRotating, setIsRotating] = useState(false)
+  const [isRotating, setIsRotating] = useState(false);
+  const [currentStage,setCurrentStage]= useState(1)
   
   const adjustShipWreckForScreenSize =()=>{
     let screenScale=null; 
@@ -66,6 +67,7 @@ const Home = () => {
         rotation={shipWreckRotation}
         isRotating={isRotating}
         setIsRotating={setIsRotating}
+        setCurrentStage={setCurrentStage}
         />
         <Balloon
         isRotating={isRotating}
