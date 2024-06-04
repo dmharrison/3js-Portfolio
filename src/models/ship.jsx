@@ -55,15 +55,35 @@ const Ship =({isRotating, setIsRotating, ...props})=> {
       }
     }
 
+    const handleKeyDown =(e) => {
+      if(e.key === 'ArrowLeft'){
+        if(!isRotating) setIsRotating(true);
+        shipRef.current.rotation.y += 0.01 * Math.PI;
+      } else if (e.key ==='ArrowRight'){
+        if(!isRotating) setIsRotating(true);
+        shipRef.current.rotation.y -= 0.01 * Math.PI;
+      }
+    }
+
+    const handleKeyUp=(e)=>{
+      if (e.key ==='ArrowLeft' || e.key ==='ArrowRight'){
+        setIsRotating(false);
+      }
+    }
+
     useEffect(()=>{
       document.addEventListener('pointerdown', handlePointerDown);
       document.addEventListener('pointerup', handlePointerUp);
       document.addEventListener('pointermove', handlePointerMove);
+      document.addEventListener('keydown', handleKeyDown);
+      document.addEventListener('keyup',handleKeyUp);
 
       return()=>{
         document.removeEventListener('pointerdown',handlePointerDown);
         document.removeEventListener('pointerup',handlePointerUp);
         document.removeEventListener('pointermove',handlePointerMove);
+        document.removeEventListener('keydown',handleKeyDown);
+        document.removeEventListener('keyUp',handleKeyUp);
       }
 
     },[gl, handlePointerDown, handlePointerUp,handlePointerMove])
