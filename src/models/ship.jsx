@@ -8,107 +8,111 @@ Title: DAE Villages | Shipwrecked Chinese Supply Store
 
 import React, { useRef, useEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
-import {useFrame, useThree} from '@react-three/fiber'
-import {a} from '@react-spring/three'
+import { useFrame, useThree } from '@react-three/fiber'
+import { a } from '@react-spring/three'
 
 import shipWreck from '../assets/3d/shipWreck.glb'
 
-const Ship =({isRotating, setIsRotating, ...props})=> {
-    const shipRef = useRef();
-    const {gl, viewport}= useThree();
+const Ship = ({ isRotating, setIsRotating, ...props }) => {
+  const shipRef = useRef();
+  const { gl, viewport } = useThree();
 
-    const lastX= useRef(0);
-    const rotationSpeed = useRef(0);
-    const dampingFactor = 1;
+  const lastX = useRef(0);
+  const rotationSpeed = useRef(0);
+  const dampingFactor = 1;
 
-    const handlePointerDown = (e) => {
-      e.stopProgation();
-      e.preventDefault();
-      setIsRotating(true);
+  const handlePointerDown = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setIsRotating(true);
 
+    const clientX = e.touches
+      ? e.touches[0].clientX
+      : e.clientX;
+
+    lastX.current = clientX;
+  }
+
+  const handlePointerUp = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setIsRotating(false);
+  }
+
+  const handlePointerMove = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+
+    if (isRotating) {
       const clientX = e.touches
-       ? e.touches[0].clientX
-       :e.clientX;
-      
-      lastX.current = clientX;
-    }
-    const handlePointerUp= (e) => {
-      e.stopProgation();
-      e.preventDefault();
-      setIsRotating(false);
+        ? e.touches[0].clientX
+        : e.clientX;
 
-      const clientX = e.touches ? e.touches[0].clientX:e.clientX;
-      const delta = (clientX-lastX.current)/viewport.width;
+      const delta = (clientX - lastX.current) / viewport.width;
 
       shipRef.current.rotation.y += delta * 0.01 * Math.PI;
-
-      lastX.current=clientX;
-
-      rotationSpeed.current=delta* 0.01 * Math.PI;
+      lastX.current = clientX;
+      rotationSpeed.current = delta * 0.01 * Math.PI;
     }
-    const handlePointerMove= (e) => {
-      e.stopProgation();
-      e.preventDefault();
-      
-      if(isRotating){
-        handlePointerUp(e)
+  }
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'ArrowLeft') {
+      if (!isRotating) setIsRotating(true);
+      shipRef.current.rotation.y += 0.01 * Math.PI;
+    } else if (e.key === 'ArrowRight') {
+      if (!isRotating) setIsRotating(true);
+      shipRef.current.rotation.y -= 0.01 * Math.PI;
+    }
+  }
+
+  const handleKeyUp = (e) => {
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+      setIsRotating(false);
+    }
+  }
+
+  useFrame(() => {
+    if (!isRotating) {
+      rotationSpeed.current *= dampingFactor;
+
+      if (Math.abs(rotationSpeed.current) < 0.001) {
+        rotationSpeed.current = 0;
       }
     }
+  })
 
-    const handleKeyDown =(e) => {
-      if(e.key === 'ArrowLeft'){
-        if(!isRotating) setIsRotating(true);
-        shipRef.current.rotation.y += 0.01 * Math.PI;
-      } else if (e.key ==='ArrowRight'){
-        if(!isRotating) setIsRotating(true);
-        shipRef.current.rotation.y -= 0.01 * Math.PI;
-      }
+  useEffect(() => {
+    const canvas = gl.domElement;
+    canvas.addEventListener('pointerdown', handlePointerDown);
+    canvas.addEventListener('pointerup', handlePointerUp);
+    canvas.addEventListener('pointermove', handlePointerMove);
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keyup', handleKeyUp);
+
+    return () => {
+      canvas.removeEventListener('pointerdown', handlePointerDown);
+      canvas.removeEventListener('pointerup', handlePointerUp);
+      canvas.removeEventListener('pointermove', handlePointerMove);
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('keyup', handleKeyUp);
     }
-
-    const handleKeyUp=(e)=>{
-      if (e.key ==='ArrowLeft' || e.key ==='ArrowRight'){
-        setIsRotating(false);
-      }
-    }
-
-    useEffect(()=>{
-      document.addEventListener('pointerdown', handlePointerDown);
-      document.addEventListener('pointerup', handlePointerUp);
-      document.addEventListener('pointermove', handlePointerMove);
-      document.addEventListener('keydown', handleKeyDown);
-      document.addEventListener('keyup',handleKeyUp);
-
-      return()=>{
-        document.removeEventListener('pointerdown',handlePointerDown);
-        document.removeEventListener('pointerup',handlePointerUp);
-        document.removeEventListener('pointermove',handlePointerMove);
-        document.removeEventListener('keydown',handleKeyDown);
-        document.removeEventListener('keyUp',handleKeyUp);
-      }
-
-    },[gl, handlePointerDown, handlePointerUp,handlePointerMove])
+  }, [gl,handleKeyDown,handlePointerMove,handlePointerUp])
 
   const { nodes, materials } = useGLTF(shipWreck)
   return (
     <a.group ref={shipRef} {...props}>
-      <mesh               
-        geometry={nodes.pCylinder109_sky_m_0.geometry}
-        material={materials.sky_m}
-        position={[38.813, 111.873, -63.188]}
-        rotation={[Math.PI / 2, 0, 0.094]}
-        scale={[70.228, 67.648, 70.228]}
-      />
-      <mesh               
+     
+      <mesh
         geometry={nodes.group144_textureAtlas_m_0.geometry}
         material={materials.textureAtlas_m}
       />
-      <mesh               
+      <mesh
         geometry={nodes.group144_environmentAtlas_m_0.geometry}
         material={materials.environmentAtlas_m}
       />
     </a.group>
   )
 }
-
 
 export default Ship;

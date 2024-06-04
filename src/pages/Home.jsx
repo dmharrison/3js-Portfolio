@@ -1,5 +1,6 @@
 import {Suspense, useState} from 'react'
 import { Canvas} from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 import Loader from '../components/Loader'
 import Ship from '../models/ship'
 
@@ -14,7 +15,7 @@ const Home = () => {
   
   const adjustShipWreckForScreenSize =()=>{
     let screenScale=null; 
-    let screenPosition=[100,-125,-220];
+    let screenPosition=[-30,-65,-350];
     let rotation =[0.1, 4.7,0]
 
     if(window.innerWidth < 768){
@@ -45,6 +46,7 @@ const Home = () => {
         setIsRotating={setIsRotating}
 
         />
+        <OrbitControls enableZoom={true} enablePan={false} />
       </Suspense>
       </Canvas>
 
