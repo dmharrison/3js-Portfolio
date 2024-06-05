@@ -1,4 +1,4 @@
-import { firstPort, employeeTracker, fitmon, venueVoyager, weatherDashboard, techBlog } from "../assets/images";
+import { bootStrap,firstPort, employeeTracker, fitmon, venueVoyager, weatherDashboard, techBlog, postgreSQL} from "../assets/images";
 import {
     HCFRlogo,    
     contact,
@@ -11,7 +11,6 @@ import {
     mongodb,
     nodejs,    
     react,    
-    summiz,
     tailwindcss,
     Cintas,
     aws,
@@ -50,6 +49,11 @@ export const skills = [
         name: "MongoDB",
         type: "Database",
     },
+    {
+        imageUrl: postgreSQL,
+        name: "PostgreSQL",
+        type: "Database",
+    },
        {
         imageUrl: nodejs,
         name: "Node.js",
@@ -64,6 +68,11 @@ export const skills = [
     {
         imageUrl: tailwindcss,
         name: "Tailwind CSS",
+        type: "Frontend",
+    },
+    {
+        imageUrl: bootStrap,
+        name: "Bootstrap",
         type: "Frontend",
     },
    
