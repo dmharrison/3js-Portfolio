@@ -3,10 +3,12 @@ import { skills, experiences } from '../constants';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
+
 const About = () => {
   return (
     <section className='max-container'>
       <h1 className='head-text'>Hello, I'm Daniel</h1>
+      {/* <img src={famPic} alt="" /> */}
       <div>
         <img src="" alt="" />
       </div>

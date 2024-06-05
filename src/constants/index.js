@@ -1,23 +1,18 @@
-import { meta, shopify, starbucks, tesla, fitmon } from "../assets/images";
+import { firstPort, employeeTracker, fitmon, venueVoyager, weatherDashboard, techBlog } from "../assets/images";
 import {
-    HCFRlogo,
-    car,
+    HCFRlogo,    
     contact,
-    css,
-    estate,
+    css,    
     express,
     github,
     html,
     javascript,
     linkedin,
     mongodb,
-    nodejs,
-    pricewise,
-    react,
-    snapgram,
+    nodejs,    
+    react,    
     summiz,
     tailwindcss,
-    threads,
     Cintas,
     aws,
     
@@ -145,38 +140,38 @@ export const projects = [
         githublink: 'https://alexer333.github.io/BeatBody-Team-Project'
     },
     {
-        iconUrl: threads,
-        theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        image: venueVoyager,        
+        name: 'VenueVoyager',
+        description: 'Created a full-stack app that allows users to track, update different professional sports stadiums',
+        live: 'https://venuevoyager-z8ap.onrender.com/',
+        githublink: 'https://github.com/P5YC0DR3AM3R/venueVoyager',
     },
     {
-        iconUrl: car,
-        theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        image: weatherDashboard,        
+        name: 'Weather Dashboard',
+        description: 'Used third party APIs to access data to make requests with specific parameter. This one uses Openweather so users can plan for their trips ',
+        live: ' https://dmharrison.github.io/weather_dashboard/',
+        githublink: 'https://github.com/dmharrison/weather_dashboard'
     },
     {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        image: employeeTracker,        
+        name: 'Employee Payroll Tracker',
+        description: 'Tasked with modifying starter code to create an application that enables a payroll manager to view and manage employee payroll data',
+        live: 'https://dmharrison.github.io/employee_payroll_tracker/',
+        githublink: 'https://github.com/dmharrison/Employee_Tracker'
     },
     {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
+        image: techBlog,        
+        name: 'Tech Blog',
+        description: 'A CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.',
+        live: 'https://tech-blog-yihd.onrender.com/',
+        githublink: 'https://github.com/dmharrison/tech_blog'
     },
     {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        image: firstPort,        
+        name: 'My first portfolio',
+        description: 'A portfolio made in week 2 just wanted to place this here to show how far I have been able to come in such a short amount of time',
+        link: 'https://dmharrison.github.io/dmh_professional_portfolio/',
+        githublink: 'https://github.com/dmharrison/dmh_professional_portfolio'
     }
 ];

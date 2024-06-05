@@ -5,6 +5,11 @@ import starbucks from './starbucks.png'
 import tesla from './tesla.png'
 import logo from './logo.svg'
 import fitmon from './fitmon.png'
+import venueVoyager from './venueVoyager.png'
+import weatherDashboard from './weatherDashboard.png'
+import employeeTracker from './employeeTracker.png'
+import techBlog from './techBlog.png'
+import firstPort from './firstPort.png'
 
 export {
     hero,
@@ -13,5 +18,11 @@ export {
     starbucks,
     tesla,
     logo,
-    fitmon
+    fitmon,
+    venueVoyager,
+    weatherDashboard,
+    employeeTracker,
+    techBlog,
+    firstPort
+
 }
