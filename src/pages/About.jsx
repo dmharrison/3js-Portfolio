@@ -7,6 +7,9 @@ const About = () => {
   return (
     <section className='max-container'>
       <h1 className='head-text'>Hello, I'm Daniel</h1>
+      <div>
+        <img src="" alt="" />
+      </div>
       <div className='mt-5 flex flex-col gap-3 text-slate-600'>
         <p>Hey! Welcome to my page I am so glad you are here! My name is Daniel Harrison and I am in the middle
            of one my biggest adventures, transitioning from fire fighter to a developer. A little about me! I

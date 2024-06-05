@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { meta, shopify, starbucks, tesla, fitmon } from "../assets/images";
 import {
     HCFRlogo,
     car,
@@ -19,7 +19,8 @@ import {
     tailwindcss,
     threads,
     Cintas,
-    aws
+    aws,
+    
 } from "../assets/icons";
 
 export const skills = [
@@ -137,11 +138,11 @@ export const socialLinks = [
 
 export const projects = [
     {
-        iconUrl: pricewise,
-        theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        image: fitmon,
+        name: 'Fitmon',
+        description: 'A fun way for users that want to get into working out and collect pokemom all together.',
+        live: 'https://github.com/Alexer333/BeatBody-Team-Project',
+        githublink: 'https://alexer333.github.io/BeatBody-Team-Project'
     },
     {
         iconUrl: threads,
