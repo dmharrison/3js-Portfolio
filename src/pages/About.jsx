@@ -2,15 +2,16 @@ import React from 'react'
 import { skills, experiences } from '../constants';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import famPic from '../assets/images/famPic.jpg'
 
 
 const About = () => {
   return (
     <section className='max-container'>
       <h1 className='head-text'>Hello, I'm Daniel</h1>
-      {/* <img src={famPic} alt="" /> */}
-      <div>
-        <img src="" alt="" />
+      
+      <div >
+        <img className="h-auto max-w-lg rounded-lg "src={famPic} alt="" />
       </div>
       <div className='mt-5 flex flex-col gap-3 text-slate-600'>
         <p>Hey! Welcome to my page I am so glad you are here! My name is Daniel Harrison and I am in the middle
