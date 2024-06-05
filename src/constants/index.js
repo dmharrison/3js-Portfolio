@@ -1,5 +1,6 @@
 import { meta, shopify, starbucks, tesla } from "../assets/images";
 import {
+    HCFRlogo,
     car,
     contact,
     css,
@@ -17,9 +18,8 @@ import {
     summiz,
     tailwindcss,
     threads,
-    HCFRlogo,
-    aws,
-    
+    Cintas,
+    aws
 } from "../assets/icons";
 
 export const skills = [
@@ -33,7 +33,8 @@ export const skills = [
         name: "Express",
         type: "Backend",
     },
-      {
+    
+    {
         imageUrl: github,
         name: "GitHub",
         type: "Version Control",
@@ -52,8 +53,8 @@ export const skills = [
         imageUrl: mongodb,
         name: "MongoDB",
         type: "Database",
-    },        
-    {
+    },
+       {
         imageUrl: nodejs,
         name: "Node.js",
         type: "Backend",
@@ -62,13 +63,15 @@ export const skills = [
         imageUrl: react,
         name: "React",
         type: "Frontend",
-    },        
+    },
+    
     {
         imageUrl: tailwindcss,
         name: "Tailwind CSS",
         type: "Frontend",
     },
-   ];
+   
+];
 
 export const experiences = [
     {
@@ -88,22 +91,30 @@ export const experiences = [
     {
         title: "Service and Sales Representative",
         company_name: "Cintas",
-        icon: tesla,
-        iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        icon: Cintas,
+        iconBg: "#ffffff",
+        date: "Octover 2016 - Jan 2018",
         points: [
             "Demonstrated exceptional customer service skills, fostering trust and driving sales growth",
             "Achieved a consistent 7-10% increase in route growth by actively promoting and selling new products, while upholding high standards of customer service",
             "Recognized for outstanding performance, earning promotion from Route Skipper to Service and Sales Representative",
-            "Consistently secured first place in multiple monthly contests for exceptional sales results and generating profitable cross-sell opportunities",
+            "Consistently secured first place in multiple monthly contests for exceptional sales results and generating profitable cross-sell opportunities",,
         ],
     },
-        {
-        Education: "Bachelors in Communications",
+    {
+        title: "Education & Certs",
+        company_name: "Valdosta State University, Amazon Cloud Practioner",
         icon: aws,
-        School: "Valdosta State University",
-        Certs: "AWS Cloud Practioner",
+        iconBg: "#FFDBBB",
+        date: "Graduated in 2014 - Cert Obtained 2024",
+        points: [
+            "Graduated with a BA in Communications.",
+            "Cum Laude",
+            "Passed AWS Cloud Practioner Exam",
+            
+        ],
     },
+    
 ];
 
 export const socialLinks = [
@@ -115,12 +126,12 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/dmharrison',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/daniel-harrison-604b4393/',
     }
 ];
 

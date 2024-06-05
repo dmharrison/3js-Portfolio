@@ -26,8 +26,14 @@ import arrow from './arrow.svg'
 import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
+import HCFRlogo from './HCFRlogo.svg'
+import aws from './aws.svg'
+import Cintas from './Cintas.svg'
 
 export {
+    Cintas,
+    aws,
+    HCFRlogo,
     css,
     express,
     git,
