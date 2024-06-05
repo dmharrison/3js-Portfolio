@@ -59,7 +59,7 @@ const Home = () => {
         <ambientLight intensity={1}/>
         <hemisphereLight skyColor='#b1e1ff' groundColor='#000000' />
        
-       <Galaxy />
+       <Galaxy isRotating={isRotating}/>
        
         <Ship 
         position={shipWreckPosition}
