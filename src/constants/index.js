@@ -145,8 +145,8 @@ export const projects = [
         image: fitmon,
         name: 'Fitmon',
         description: 'A fun way for users that want to get into working out and collect pokemom all together.',
-        live: 'https://github.com/Alexer333/BeatBody-Team-Project',
-        githublink: 'https://alexer333.github.io/BeatBody-Team-Project'
+        live: 'https://alexer333.github.io/BeatBody-Team-Project',
+        githublink: 'https://github.com/Alexer333/BeatBody-Team-Project'
     },
     {
         image: venueVoyager,        
