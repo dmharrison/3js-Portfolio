@@ -7,12 +7,6 @@ import Galaxy from '../models/Galaxy'
 import Balloon from '../models/Balloon'
 import PopupInfo from '../components/PopupInfo'
 
-
-
-
-
-
-
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage,setCurrentStage]= useState(1)

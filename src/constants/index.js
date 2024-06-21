@@ -1,4 +1,4 @@
-import { bootStrap,firstPort, employeeTracker, fitmon, venueVoyager, weatherDashboard, techBlog, postgreSQL} from "../assets/images";
+import { bootStrap,firstPort, employeeTracker, fitmon, pantry, weatherDashboard, techBlog, postgreSQL, } from "../assets/images";
 import {
     HCFRlogo,    
     contact,
@@ -142,18 +142,18 @@ export const socialLinks = [
 
 export const projects = [
     {
+        image: pantry,       
+        name: 'Pantry.JS',
+        description: 'An app built on React and Material UI, with a back end that utilizes GraphQL/Apollo and MongoDB.',
+        live: 'https://pantry-js.onrender.com/',
+        githublink: 'https://github.com/LemonTag/Pantry.js',
+    },
+    {
         image: fitmon,
         name: 'Fitmon',
         description: 'A fun way for users that want to get into working out and collect pokemom all together.',
         live: 'https://alexer333.github.io/BeatBody-Team-Project',
         githublink: 'https://github.com/Alexer333/BeatBody-Team-Project'
-    },
-    {
-        image: venueVoyager,        
-        name: 'VenueVoyager',
-        description: 'Created a full-stack app that allows users to track, update different professional sports stadiums',
-        live: 'https://venuevoyager-z8ap.onrender.com/',
-        githublink: 'https://github.com/P5YC0DR3AM3R/venueVoyager',
     },
     {
         image: weatherDashboard,        

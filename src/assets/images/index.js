@@ -7,10 +7,10 @@ import techBlog from './techBlog.png'
 import firstPort from './firstPort.png'
 import postgreSQL from './postgreSQL.png'
 import bootStrap from './bootStrap.png'
+import pantry from './pantry.png'
 
 export {
-    
-    
+    pantry,    
     fitmon,
     venueVoyager,
     weatherDashboard,
