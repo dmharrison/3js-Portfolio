@@ -180,7 +180,7 @@ export const projects = [
         image: firstPort,        
         name: 'My first portfolio',
         description: 'A portfolio made in week 2 just wanted to place this here to show how far I have been able to come in such a short amount of time',
-        link: 'https://dmharrison.github.io/dmh_professional_portfolio/',
+        live: 'https://dmharrison.github.io/dmh_professional_portfolio/',
         githublink: 'https://github.com/dmharrison/dmh_professional_portfolio'
     }
 ];
