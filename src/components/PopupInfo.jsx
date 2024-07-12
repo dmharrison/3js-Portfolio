@@ -16,7 +16,9 @@ const renderContent ={
     1:(
         <h1 className='sm:text-xl sm:leading-snug text-center neo-brutalism-grey py-4 px-8 text-white mx-5'>
             Hey! I am <span className='font-bold'>Daniel Harrison</span><br/>
-            I am so glad you are here.</h1>
+            I am so glad you are here. <br/> One of the reason I love software engineering is that your imagination can become your reality.  <br/>
+            Feel free to use your mouse or keyboard to moved around the ship! </h1>
+            
     ),
     2:(
         <InfoBox 

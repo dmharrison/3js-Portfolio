@@ -3,6 +3,7 @@ import { skills, experiences } from '../constants';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import famPic from '../assets/images/famPic.jpg'
+import resume from '../assets/resume/dmh_resume.pdf'
 
 
 const About = () => {
@@ -38,6 +39,8 @@ const About = () => {
 
       <div className='py-16'>
         <h3 className='subhead-text'>Work Experience</h3>
+        <a href={resume} download> <h4 className='underline'>Download my resume</h4>
+        </a>
         <div className='mt-5 flex flex-col gap-3 text-slate-600'>
           <p>I've worked with a wide variety of companies, trying to make a more lasting impression each time. One common theme among my resume is that I love to learn and hustle.</p>
         </div>
